@@ -1,0 +1,34 @@
+package HomeWork_3;
+
+import java.util.*;
+
+
+public class N_3 {
+    public static void main(String[] args) {
+        Random random = new Random();
+        int[] Array = new int[4];
+        for (int i = 0; i < 4; i++) {
+            Array[i] = random.nextInt(10,99);
+        }
+        System.out.println("Массив:");
+        for (int j = 0; j < 4; j++) {
+            System.out.print(Array[j] + " ");
+        }
+        int flag = 1;
+
+        for (int j = 0; j < 3; j++) {
+            if (Array[j] >= Array[j + 1]) {
+                flag = 0;
+                break;
+            }
+        }
+        if (flag == 0){
+            System.out.println("\nМассив НЕ является строго возрастающей последовательностью.");
+        }
+        else {
+
+            System.out.println("\nМассив является строго возрастающей последовательностью.");
+        }
+
+    }
+}
