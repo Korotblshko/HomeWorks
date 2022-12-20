@@ -1,0 +1,35 @@
+package HomeWork_3;
+
+import java.util.*;
+
+
+public class N_4 {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Введите размер массива.");
+        int n = scan.nextInt();
+        while (n <= 0) {
+            System.out.println("Число должно быть натуральным. Попробуйте еще раз.");
+            n = scan.nextInt();
+        }
+        Random random = new Random();
+        int[] Array = new int[n];
+        for (int i = 0; i < n; i++) {
+            Array[i] = random.nextInt(0, n);
+        }
+        System.out.println("Ваш рандомный массив из " + n + " элементов:");
+        for (int j = 0; j < n; j++) {
+            System.out.print(Array[j] + " ");
+        }
+        Set <Integer> even = new HashSet<>();
+        for (int i : Array) {
+            if (i % 2 == 0) {
+                even.add(i);
+            }
+        }
+        System.out.println("\nЧетные числа из него:");
+        for (int i : even){
+            System.out.print(i + " ");
+        }
+    }
+}
