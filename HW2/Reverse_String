@@ -1,0 +1,13 @@
+package HomeWork_2;
+import java.util.*;
+
+public class Reverse_String {
+    public static void main(String[] args) {
+        List <String> string = new ArrayList<>(
+                Arrays.asList("a", "b", "c")
+        );
+        System.out.println(string);
+        Collections.reverse(string);
+        System.out.println(string);
+    }
+}
