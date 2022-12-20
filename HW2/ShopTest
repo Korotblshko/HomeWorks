@@ -1,0 +1,50 @@
+package HomeWork_2;
+
+import java.util.Scanner;
+
+public class ShopTest {
+
+
+
+    public static void main(String[] args) {
+        Shop shop = new Shop();
+        Scanner sc = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Здравствуйте! Здесь вы можете добавлять, удалять и искать в базе любые компьютеры. Давайте начнем.");
+        while (true) {
+            System.out.println("""
+                    Выберите действие
+                        1. Добавить компьютер.
+                        2. Удалить компьютер.
+                        3. Найти компьютер.
+                        4. Завершить выполнение программы.
+                    """);
+            int answer = 0;
+            while (answer != 1 && answer != 2 && answer != 3 && answer != 4) {
+                System.out.println("Выберите из списка нужный вариант.");
+                answer = sc.nextInt();
+            }
+            if (answer == 4) {
+                System.out.println("Программа была завершена.");
+                System.exit(0);
+            }
+            System.out.println("Введите имя компьютера.");
+            String computer_id = scan.nextLine();
+
+            if (answer == 1) {
+
+                System.out.println(shop.addComputer(computer_id));
+            }
+            if (answer == 2) {
+
+                System.out.println(shop.deleteComputer(computer_id));
+            }
+            if (answer == 3) {
+
+                System.out.println(shop.findComputer(computer_id));
+            }
+        }
+
+    }
+
+}
