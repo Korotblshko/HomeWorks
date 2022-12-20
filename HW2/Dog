@@ -1,0 +1,42 @@
+package HomeWork_2;
+
+public class Dog {
+    private String moniker;
+    private short age;
+
+    Dog (String moniker, short age) {
+        this.moniker = moniker;
+        this.age = age;
+    }
+
+    public short getAge() {
+        return age;
+    }
+
+    public String getMoniker() {
+        return moniker;
+    }
+
+    public void setAge(short age) {
+        this.age = age;
+    }
+
+    public void setMoniker(String moniker) {
+        this.moniker = moniker;
+    }
+    public int toHumanYears() {
+        return age * 7;
+    }
+
+    public String toStrings() {
+        return "Dog:" +
+                "moniker is " + moniker + '\'' +
+                "age is " + age +
+                "in human years it's " + this.toHumanYears() +
+                '}';
+    }
+
+
+
+
+}
