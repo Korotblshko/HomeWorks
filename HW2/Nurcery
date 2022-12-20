@@ -1,0 +1,31 @@
+package HomeWork_2;
+
+import java.util.*;
+
+public class Nursery {
+    public static void main(String[] args) {
+        List <Dog> dogs = new ArrayList<>();
+        Scanner input = new Scanner(System.in);
+
+
+        while (true) {
+            System.out.println("* чтобы завершить программу, введите <завершить> в поле клички");
+            System.out.println("Введите кличку и возраст собаки");
+            System.out.println("Кличка:");
+            String moniker = input.nextLine();
+            if (moniker.equals("завершить")){
+                System.exit(0);
+            }
+            System.out.println("Возраст:");
+            short age = input.nextShort();
+
+            Dog dog = new Dog(moniker, age);
+            dogs.add(dog);
+            int hum_years = dog.toHumanYears();
+            if (hum_years % 10 == 2 || hum_years % 10 == 3 || hum_years % 10 == 4){
+                System.out.printf("Собаке %s %d года в человеческих годах\n", moniker, hum_years);
+            }
+            else System.out.printf("Собаке %s %d лет в человеческих годах\n",moniker,hum_years);
+        }
+    }
+}
