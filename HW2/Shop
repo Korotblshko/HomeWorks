@@ -1,0 +1,27 @@
+package HomeWork_2;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Shop {
+    Scanner sc = new Scanner(System.in);
+    ArrayList<String> computers = new ArrayList<>();
+    public String addComputer(String computer){
+        computers.add(computer);
+        return "Компьютер " + '"' + computer + '"' + " добавлен.";
+    }
+    public String deleteComputer(String computer){
+        computers.remove(computer);
+        return "Компьютер " + computer + " удален.";
+    }
+    public String findComputer(String computer)
+    {
+        if (computers.contains(computer)) {
+            return "Этот компьютер есть в наличии.";
+        }
+        else return "К сожалению, этого компьютера нет в наличии.";
+    }
+
+
+    }
+
